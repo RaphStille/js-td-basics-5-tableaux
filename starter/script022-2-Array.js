@@ -20,6 +20,13 @@ EXERCICE :
 - évaluez chacune des expressions qui suivent
 - vérifiez votre réponse en affichant la valeur de l'expression dans la console
 */
+
+for (let i = 0; i < mines.length; i++) {
+    console.log(mines[i]);
+    for (let j = 0; j < mines[i].length; j++) {
+        console.log(mines[i][j]);
+    }
+}
 mines		// …………………………………………………………………
 mines[1]	// …………………………………………………………………
 mines[0][3] // …………………………………………………………………
@@ -34,6 +41,8 @@ mines[0][3] // ………………………………………………………�
 
 
 
+
+
 // Testez de la même manière l'emplacement situé en première ligne quatrième colonne
 
 
@@ -41,3 +50,13 @@ mines[0][3] // ………………………………………………………�
 // Pour indiquer combien de mines contient la première ligne de ce tableau,
 // vous devez parcourir les éléments de cette ligne et compter combien d'entre eux sont égaux à 1.
 
+console.log(mines[0]);
+
+let minesNumb = 0;
+
+for (let i = 0; i < mines[0].length; i++) {
+    if (mines[0][i] >0){
+        minesNumb = minesNumb + 1;
+    }
+}
+console.log(minesNumb)
